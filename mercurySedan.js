@@ -1,8 +1,10 @@
 
-import * as original from './vehicle.js'
+import {Vehicle} from './vehicle.js'
 
-class Car extends original.Vehicle {
-    constructor(sedan) {
+console.log(Vehicle('more', 'than', 'a', 'car', 'bro'))
+
+class Car extends Vehicle {
+    constructor(more) {
         super("car", "Sedan", 1965, "tan", "used")
     }
 }
