@@ -13,7 +13,7 @@ class Car extends Vehicle {
     }
     loadPassenger(num) {
         let availableRoom
-        if (passenger + num > 0 && passenger + num <= maximumPassengers) {
+        if (passenger + num >= 0 && passenger + num <= maximumPassengers) {
             availableRoom = true
         } else if (passenger + num > maximumPassengers) {
             availableRoom = false
@@ -30,12 +30,16 @@ class Car extends Vehicle {
     maintenance(mileage) {
         if (mileage > 30000) {
             this.scheduleService = true
+            console.log('Time to take it for servicing.')
         }
     }
 }
 
 const sedan = new Car("car", "Sedan", 1965, "tan", "used")
 console.log(sedan)
+console.log(start())
+console.log(loadPassenger(0))
+console.log(maintenance(31000))
 
 //this includes the vehicle class as a module
 // const VehicleModule = require("./vehicle")
