@@ -23,12 +23,12 @@ class Car extends Vehicle {
             console.log('Please enter a number 0 and above.')
         }
     }
-    start() {
-        if (fuel > 0) {
-            this.start = true
-            console.log(`The ${this.type} started.`)
-        }
-    }
+    // start() {
+    //     if (fuel > 0) {
+    //         this.start = true
+    //         console.log(`The ${this.type} started.`)
+    //     }
+    // }
     maintenance(mileage) {
         if (mileage > 30000) {
             this.scheduleService = true
