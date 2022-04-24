@@ -39,9 +39,9 @@ class Car extends Vehicle {
 
 const sedan = new Car("car", "Sedan", 1965, "tan", "used")
 console.log(sedan)
-Car.start()
-Car.loadPassenger(0)
-Car.maintenance(31000)
+sedan.start()
+sedan.loadPassenger(0)
+sedan.maintenance(31000)
 
 //this includes the vehicle class as a module
 // const VehicleModule = require("./vehicle")
