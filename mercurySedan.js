@@ -26,6 +26,7 @@ class Car extends Vehicle {
     start() {
         if (fuel > 0) {
             this.start = true
+            console.log(`The ${this.type} started.`)
         }
     }
     maintenance(mileage) {
