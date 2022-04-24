@@ -9,6 +9,7 @@ class Car extends Vehicle {
         this.numberOfWheels = 4;
         this.maximumSpeed = 160;
         this.fuel = 10;
+        this.start = false;
         this.scheduleService = false;
     }
     loadPassenger(num) {
@@ -24,7 +25,7 @@ class Car extends Vehicle {
     }
     start() {
         if (fuel > 0) {
-            this.start
+            this.start = true
         }
     }
     maintenance(mileage) {
