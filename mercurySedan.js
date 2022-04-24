@@ -39,7 +39,7 @@ class Car extends Vehicle {
 
 const sedan = new Car("car", "Sedan", 1965, "tan", "used")
 console.log(sedan)
-sedan.start()
+// sedan.start()
 sedan.loadPassenger(0)
 sedan.maintenance(31000)
 
