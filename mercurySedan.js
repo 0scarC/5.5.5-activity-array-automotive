@@ -25,6 +25,7 @@ class Car extends Vehicle {
         let availableRoom
         if (this.passengers >= 0 && this.passengers <= this.maximumPassengers) {
             availableRoom = true
+            console.log(`There's enough room for you all.`)
         } else if (this.passenger > this.maximumPassengers) {
             availableRoom = false
             console.log(`The ${this.year} ${this.type} can't hold ${this.passenger + num} passengers.`)
@@ -43,7 +44,7 @@ class Car extends Vehicle {
 const sedan = new Car("car", "Sedan", 1965, "tan", "used")
 console.log(sedan)
 sedan.start()
-sedan.loadPassenger(0)
+sedan.loadPassenger()
 sedan.maintenance(31000)
 
 //this includes the vehicle class as a module
