@@ -12,6 +12,15 @@ class Car extends Vehicle {
         this.startup = false;
         this.scheduleService = false;
     }
+    start() {
+        if (this.fuel > 0) {
+            this.startup = true
+            console.log(`The ${this.type} started.`)
+        } else {
+            this.startup = false
+            console.log(`The ${this.type} could not start, needs more fuel.`)
+        }
+    }
     loadPassenger(num) {
         let availableRoom
         if (passenger + num >= 0 && passenger + num <= maximumPassengers) {
@@ -21,15 +30,6 @@ class Car extends Vehicle {
             console.log(`The ${this.year} ${this.type} can't hold ${this.passenger + num} passengers.`)
         } else {
             console.log('Please enter a number 0 and above.')
-        }
-    }
-    start() {
-        if (this.fuel > 0) {
-            this.startup = true
-            console.log(`The ${this.type} started.`)
-        } else {
-            this.startup = false
-            console.log(`The ${this.type} could not start, needs more fuel.`)
         }
     }
     maintenance(mileage) {
