@@ -23,9 +23,9 @@ class Car extends Vehicle {
     }
     loadPassenger(num) {
         let availableRoom
-        if (passenger + num >= 0 && passenger + num <= maximumPassengers) {
+        if (this.passenger + num >= 0 && this.passenger + num <= maximumPassengers) {
             availableRoom = true
-        } else if (passenger + num > maximumPassengers) {
+        } else if (this.passenger + num > maximumPassengers) {
             availableRoom = false
             console.log(`The ${this.year} ${this.type} can't hold ${this.passenger + num} passengers.`)
         } else {
