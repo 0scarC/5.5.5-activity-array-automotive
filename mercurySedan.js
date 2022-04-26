@@ -9,7 +9,7 @@ class Car extends Vehicle {
         this.numberOfWheels = 4;
         this.maximumSpeed = 160;
         this.fuel = 10;
-        this.start = false;
+        this.startup = false;
         this.scheduleService = false;
     }
     loadPassenger(num) {
@@ -23,10 +23,13 @@ class Car extends Vehicle {
             console.log('Please enter a number 0 and above.')
         }
     }
-    start(fuel) {
-        if (fuel > 0) {
-            this.start = true
+    start() {
+        if (this.fuel > 0) {
+            this.startup = true
             console.log(`The ${this.type} started.`)
+        } else {
+            this.startup = false
+            console.log(`The ${this.type} could not start, needs more fuel.`)
         }
     }
     maintenance(mileage) {
