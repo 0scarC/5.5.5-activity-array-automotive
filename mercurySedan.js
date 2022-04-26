@@ -5,7 +5,7 @@ class Car extends Vehicle {
     constructor(type, model, year, color, condition) {
         super(type, model, year, color, condition)
         this.maximumPassengers = 5;
-        this.passenger = 0;
+        this.passengers = 0;
         this.numberOfWheels = 4;
         this.maximumSpeed = 160;
         this.fuel = 10;
@@ -21,11 +21,11 @@ class Car extends Vehicle {
             console.log(`The ${this.type} could not start, needs more fuel.`)
         }
     }
-    loadPassenger(num) {
+    loadPassenger() {
         let availableRoom
-        if (this.passenger + num >= 0 && this.passenger + num <= this.maximumPassengers) {
+        if (this.passengers >= 0 && this.passengers <= this.maximumPassengers) {
             availableRoom = true
-        } else if (this.passenger + num > this.maximumPassengers) {
+        } else if (this.passenger > this.maximumPassengers) {
             availableRoom = false
             console.log(`The ${this.year} ${this.type} can't hold ${this.passenger + num} passengers.`)
         } else {
